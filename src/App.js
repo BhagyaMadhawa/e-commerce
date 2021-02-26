@@ -3,7 +3,7 @@ import { commerce } from "./lib/commerce";
 // import Products from './Components/Products/Products'
 // import Navbar from "./Components/Navbar/Navbar";
 
-import {  Products, Navbar } from "./Components";
+import {  Products, Navbar, Cart } from "./Components";
 
 const App = () => {
 
@@ -29,12 +29,11 @@ const App = () => {
         fetchCart();
     }, [])
 
-    console.log(cart);
-
     return (
         <div>
             <Navbar totalItems={cart.total_items} />
-            <Products products={products} onAddToCart={handleAddToCart}  />
+            {/* <Products products={products} onAddToCart={handleAddToCart}  /> */}
+            <Cart cart={cart} />
         </div>
     )
 }
