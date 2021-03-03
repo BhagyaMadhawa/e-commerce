@@ -3,9 +3,8 @@ import { commerce } from "./lib/commerce";
 // import Products from './Components/Products/Products'
 // import Navbar from "./Components/Navbar/Navbar";
 
-import {  Products, Navbar, Cart } from "./Components";
+import {  Products, Navbar, Cart, Checkout } from "./Components";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Product from './Components/Products/Product/Product';
 
 const App = () => {
 
@@ -66,6 +65,10 @@ const App = () => {
                             handleRemoveFromCart={handleRemoveFromCart}
                             handleEmptyCart={handleEmptyCart}
                         />
+                    </Route>
+
+                    <Route exact path="/checkout">
+                        <Checkout  />
                     </Route>
                     
                 </Switch>
